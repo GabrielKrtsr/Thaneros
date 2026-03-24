@@ -1,0 +1,70 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+
+<main>
+  <%- include('../partials/page-hero', {
+    eyebrow: 'Services',
+    title: 'Un accompagnement complet pour une présence digitale haut de gamme.',
+    description: 'Chaque bloc reprend l’esprit des maquettes et s’intègre dans un système plus large, cohérent d’une page à l’autre.'
+  }) %>
+
+  <section class="section">
+    <div class="container service-stack">
+      <article class="service-row reveal">
+        <div>
+          <p class="chip">Présence digitale</p>
+          <h2>Sites vitrines multipages</h2>
+        </div>
+        <div>
+          <p>Des pages éditoriales, hiérarchisées et connectées pour présenter une offre premium avec une lecture simple et des CTA clairs.</p>
+          <ul class="list-clean">
+            <li>Architecture SEO sémantique</li>
+            <li>Navigation cohérente sur tout le parcours</li>
+            <li>Sections réutilisables en marque blanche</li>
+          </ul>
+        </div>
+      </article>
+      <article class="service-row reveal">
+        <div>
+          <p class="chip">Évolution</p>
+          <h2>Refonte premium</h2>
+        </div>
+        <div>
+          <p>Modernisation visuelle et technique d’un site existant pour gagner en crédibilité, clarifier le message et uniformiser l’identité.</p>
+          <ul class="list-clean">
+            <li>Refonte du système visuel</li>
+            <li>Nettoyage du HTML et du CSS</li>
+            <li>Composants communs pour gagner du temps</li>
+          </ul>
+        </div>
+      </article>
+      <article class="service-row reveal">
+        <div>
+          <p class="chip">Scalabilité</p>
+          <h2>Template marque blanche</h2>
+        </div>
+        <div>
+          <p>Une base premium qui peut être renommée, retextualisée ou enrichie sans repartir de zéro pour chaque nouveau client.</p>
+          <ul class="list-clean">
+            <li>Variables d’identité centralisées</li>
+            <li>Partials EJS et blocs répétables</li>
+            <li>Socle stable pour futures variantes</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <%- include('../partials/final-cta', {
+    eyebrow: 'Voir plus loin',
+    title: 'Les services s’appuient sur des cas concrets et un parcours de navigation continu.',
+    description: 'La suite logique après cette page est de montrer des exemples puis d’ouvrir la discussion.',
+    primaryLabel: 'Voir les réalisations',
+    primaryHref: '/realisations',
+    secondaryLabel: 'Contacter le studio',
+    secondaryHref: '/contact'
+  }) %>
+</main>
+
+<%- include('../partials/footer') %>
+<%- include('../partials/scripts') %>

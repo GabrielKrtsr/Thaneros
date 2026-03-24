@@ -1,0 +1,23 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3><%= site.companyName %></h3>
+      <p><%= site.baseline %></p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><%= site.email %></p>
+      <p><%= site.phone %></p>
+      <p><%= site.address %></p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <% site.nav.forEach((item) => { %>
+        <a href="<%= item.href %>" class="<%= currentPath === item.href ? 'active' : '' %>"><%= item.label %></a>
+      <% }); %>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <small>© <%= new Date().getFullYear() %> <%= site.companyName %>. Tous droits reserves.</small>
+  </div>
+</footer>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thaneros | Fine Digital Craftsmanship</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#050A18",
+              "surface": "#080e1c",
+              "primary": "#e9c176", // Subtle Gold
+              "on-primary": "#1a160d",
+              "secondary": "#dde2f6", // Off-white/Silver
+              "accent": "#e9c176",
+              "outline": "#45464c",
+            },
+            fontFamily: {
+              "headline": ["Noto Serif", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "2px", "xl": "4px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .luxury-gradient {
+            background: radial-gradient(circle at 50% 0%, rgba(233, 193, 118, 0.05) 0%, rgba(5, 10, 24, 0) 75%);
+        }
+        .serif-italic {
+            font-style: italic;
+        }
+        .letter-spacing-tight {
+            letter-spacing: -0.02em;
+        }
+        .letter-spacing-wide {
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body class="bg-background text-secondary font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar Shell -->
+<header class="fixed top-0 w-full z-50 bg-[#050A18]/80 backdrop-blur-xl shadow-xl shadow-[#050a18]/40">
+<nav class="flex justify-between items-center w-full px-12 py-6 max-w-[1440px] mx-auto">
+<div class="text-2xl font-serif tracking-tighter text-[#e9c176]">Thaneros</div>
+<div class="hidden md:flex items-center space-x-12 font-label text-[11px] uppercase tracking-[0.15em] font-medium">
+<a class="text-[#e9c176] border-b border-[#e9c176]/30 pb-1" href="#">Services</a>
+<a class="text-[#dde2f6]/70 hover:text-[#e9c176] transition-colors duration-300" href="#">Projets</a>
+<a class="text-[#dde2f6]/70 hover:text-[#e9c176] transition-colors duration-300" href="#">À Propos</a>
+<a class="text-[#dde2f6]/70 hover:text-[#e9c176] transition-colors duration-300" href="#">Contact</a>
+</div>
+<button class="border border-[#e9c176]/40 text-[#e9c176] px-8 py-2.5 text-[11px] uppercase tracking-[0.1em] font-bold hover:bg-[#e9c176] hover:text-[#1a160d] transition-all duration-500 active:scale-[0.98]">Initier un Projet</button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden luxury-gradient">
+<div class="max-w-[1440px] mx-auto px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-16">
+<div class="lg:col-span-8">
+<div class="flex items-center space-x-4 mb-8">
+<div class="w-12 h-[1px] bg-primary/40"></div>
+<span class="text-primary font-label tracking-[0.2em] text-[10px] uppercase">Atelier Digital de Haute Facture</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-headline font-normal text-secondary letter-spacing-tight leading-[1.05] mb-10">Architectes d'Expériences Digitales <span class="serif-italic text-primary">Raffinées</span>.</h1>
+<p class="text-lg text-secondary/60 max-w-xl mb-14 leading-relaxed font-light">Nous synthétisons l'ingénierie logicielle de haute précision avec une esthétique sans compromis pour bâtir des infrastructures résilientes et intelligentes pour l'ère moderne.</p>
+<div class="flex flex-col sm:flex-row gap-8">
+<button class="bg-primary text-on-primary px-10 py-5 font-bold text-[12px] uppercase tracking-widest hover:brightness-110 transition-all duration-500 shadow-2xl flex items-center justify-center space-x-4 group">
+<span>Définir Votre Vision</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">east</span>
+</button>
+<button class="border-b border-secondary/20 px-4 py-5 text-[12px] uppercase tracking-widest text-secondary hover:text-primary hover:border-primary transition-all flex items-center justify-center">Voir le Portfolio</button>
+</div>
+</div>
+<div class="lg:col-span-4 relative hidden lg:flex items-center justify-center">
+<div class="w-full aspect-[4/5] border border-primary/10 flex items-center justify-center relative p-12">
+<div class="absolute top-0 left-0 w-8 h-8 border-t border-l border-primary/30"></div>
+<div class="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-primary/30"></div>
+<div class="text-center">
+<span class="material-symbols-outlined text-primary/40 text-7xl font-light mb-6">architecture</span>
+<div class="text-secondary/40 font-headline italic text-xl tracking-widest">EST. MMXXIV</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-32 bg-surface">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="mb-24 flex flex-col md:flex-row md:items-end justify-between border-b border-outline/10 pb-12">
+<div class="max-w-2xl">
+<h2 class="text-4xl md:text-5xl font-headline text-secondary mb-6">Services de Précision</h2>
+<p class="text-secondary/50 font-light italic">Une approche modulaire vers l'excellence numérique.</p>
+</div>
+<div class="mt-8 md:mt-0">
+<span class="text-[10px] uppercase tracking-[0.3em] text-primary/60">01 — EXPERTISES</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-l border-t border-outline/10">
+<!-- Service 1 -->
+<div class="p-12 border-r border-b border-outline/10 hover:bg-background/40 transition-all duration-700 group">
+<div class="text-primary/40 mb-10 group-hover:text-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl">auto_awesome</span>
+</div>
+<h3 class="text-2xl font-headline text-secondary mb-6 group-hover:translate-x-2 transition-transform duration-500">Présence Digitale</h3>
+<p class="text-secondary/50 leading-relaxed mb-8 font-light text-sm">Des expériences de marque immersives qui capturent l'essence. Nous créons des vitrines de haute fidélité pour l'élite numérique.</p>
+<div class="pt-6 border-t border-outline/10 flex items-center text-[10px] uppercase tracking-widest text-primary/60"><span class="mr-2">Optimisation Retina</span><span class="mx-2">•</span><span>Maîtrise SEO</span></div>
+</div>
+<!-- Service 2 -->
+<div class="p-12 border-r border-b border-outline/10 hover:bg-background/40 transition-all duration-700 group">
+<div class="text-primary/40 mb-10 group-hover:text-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl">database</span>
+</div>
+<h3 class="text-2xl font-headline text-secondary mb-6 group-hover:translate-x-2 transition-transform duration-500">Systèmes Sur Mesure</h3>
+<p class="text-secondary/50 leading-relaxed mb-8 font-light text-sm">Infrastructures robustes pour opérations critiques. Gestion de données complexe mariée à des interfaces utilisateur fluides.</p>
+<div class="pt-6 border-t border-outline/10 flex items-center text-[10px] uppercase tracking-widest text-primary/60"><span class="mr-2">Cloud Native</span><span class="mx-2">•</span><span>Données Temps Réel</span></div>
+</div>
+<!-- Service 3 -->
+<div class="p-12 border-r border-b border-outline/10 hover:bg-background/40 transition-all duration-700 group">
+<div class="text-primary/40 mb-10 group-hover:text-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl">psychology</span>
+</div>
+<h3 class="text-2xl font-headline text-secondary mb-6 group-hover:translate-x-2 transition-transform duration-500">Intelligence Appliquée</h3>
+<p class="text-secondary/50 leading-relaxed mb-8 font-light text-sm">Le machine learning au service de la performance. Modélisation prédictive conçue pour automatiser votre succès futur.</p>
+<div class="pt-6 border-t border-outline/10 flex items-center text-[10px] uppercase tracking-widest text-primary/60"><span class="mr-2">Experts NLP</span><span class="mx-2">•</span><span>Pipelines ML</span></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tech Stack Section -->
+<section class="py-32 bg-background">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl">
+<h2 class="text-4xl font-headline text-secondary mb-6">L'Arsenal <span class="serif-italic">Technologique</span></h2>
+<p class="text-secondary/50 font-light">Sélectionner uniquement les frameworks les plus raffinés pour garantir longévité et performances inégalées.</p>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-outline/10 border border-outline/10">
+<div class="bg-background p-12 flex flex-col items-center justify-center group hover:bg-surface transition-colors">
+<div class="text-2xl font-headline mb-3 text-secondary group-hover:text-primary transition-colors">React</div>
+<div class="text-[9px] text-primary/40 font-label tracking-[0.3em] uppercase">Architecture</div>
+</div>
+<div class="bg-background p-12 flex flex-col items-center justify-center group hover:bg-surface transition-colors">
+<div class="text-2xl font-headline mb-3 text-secondary group-hover:text-primary transition-colors">Next.js</div>
+<div class="text-[9px] text-primary/40 font-label tracking-[0.3em] uppercase">Performance</div>
+</div>
+<div class="bg-background p-12 flex flex-col items-center justify-center group hover:bg-surface transition-colors">
+<div class="text-2xl font-headline mb-3 text-secondary group-hover:text-primary transition-colors">Python</div>
+<div class="text-[9px] text-primary/40 font-label tracking-[0.3em] uppercase">Intelligence</div>
+</div>
+<div class="bg-background p-12 flex flex-col items-center justify-center group hover:bg-surface transition-colors">
+<div class="text-2xl font-headline mb-3 text-secondary group-hover:text-primary transition-colors">TensorFlow</div>
+<div class="text-[9px] text-primary/40 font-label tracking-[0.3em] uppercase">TRAITEMENT</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 relative overflow-hidden bg-surface">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="relative py-24 px-12 text-center border border-primary/10">
+<div class="absolute inset-0 bg-primary/[0.02]"></div>
+<h2 class="text-4xl md:text-6xl font-headline text-secondary mb-10 relative z-10 leading-tight">Prêt pour le <span class="serif-italic">Prochain</span> Palier ?</h2>
+<p class="text-lg text-secondary/50 mb-14 max-w-2xl mx-auto relative z-10 font-light">Discutons de votre ambition et construisons l'architecture numérique qui la soutiendra.</p>
+<div class="relative z-10">
+<button class="bg-primary text-on-primary px-12 py-5 font-bold text-[13px] uppercase tracking-widest hover:scale-[1.02] transition-all duration-500 shadow-2xl active:scale-[0.98]">Commencer la Consultation</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-[#080e1c] full-width py-24 px-12 border-t border-[#45464c]/15">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-16">
+<div>
+<div class="text-xl font-serif text-[#dde2f6] mb-6">Thaneros</div>
+<p class="text-[#dde2f6]/50 text-sm font-light mb-8 leading-relaxed">Architectes du futur numérique. Façonné pour l'Atelier de Minuit.</p>
+<div class="flex space-x-6">
+<a class="text-[#dde2f6]/40 hover:text-[#e9c176] transition-all" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-[#dde2f6]/40 hover:text-[#e9c176] transition-all" href="#"><span class="material-symbols-outlined">hub</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-[#e9c176] font-serif italic mb-8">Expertises</h4>
+<ul class="space-y-4 text-sm font-light">
+<li><a class="text-[#dde2f6]/60 hover:text-[#e9c176] transition-all" href="#">Présence Digitale</a></li>
+<li><a class="text-[#dde2f6]/60 hover:text-[#e9c176] transition-all" href="#">Systèmes Sur Mesure</a></li>
+<li><a class="text-[#dde2f6]/60 hover:text-[#e9c176] transition-all" href="#">Intelligence Appliquée</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#e9c176] font-serif italic mb-8">L'Atelier</h4>
+<ul class="space-y-4 text-sm font-light">
+<li><a class="text-[#dde2f6]/60 hover:text-[#e9c176] transition-all" href="#">Notre Philosophie</a></li>
+<li><a class="text-[#dde2f6]/60 hover:text-[#e9c176] transition-all" href="#">Le Journal</a></li>
+<li><a class="text-[#dde2f6]/60 hover:text-[#e9c176] transition-all" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#e9c176] font-serif italic mb-8">Localisation</h4>
+<p class="text-[#dde2f6]/60 text-sm font-light mb-6 leading-relaxed">
+                Paris, France<br/>
+                Remote First Collective
+            </p>
+<p class="text-[#e9c176] text-sm font-medium">hello@thaneros.io</p>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-24 pt-8 border-t border-[#45464c]/10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-[#dde2f6]/40 text-[10px] uppercase tracking-widest">© 2024 Thaneros. Tous droits réservés.</p>
+<div class="flex space-x-10 text-[10px] uppercase tracking-widest text-[#dde2f6]/40">
+<a class="hover:text-[#e9c176] transition-colors" href="#">Politique de Confidentialité</a>
+<a class="hover:text-[#e9c176] transition-colors" href="#">Conditions d'Engagement</a>
+</div>
+</div>
+</footer>
+</body></html>

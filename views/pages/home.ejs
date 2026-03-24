@@ -1,0 +1,120 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+
+<main>
+  <section class="hero-shell">
+    <div class="container hero-grid">
+      <div class="reveal">
+        <p class="eyebrow">Atelier digital en marque blanche</p>
+        <h1>Architectes d'expériences digitales raffinées.</h1>
+        <p class="lead">Thaneros transforme tes templates en un site premium cohérent, modulaire et prêt à être dupliqué ou adapté à d'autres identités.</p>
+        <div class="cta-row">
+          <a href="/contact" class="btn">Initier un projet</a>
+          <a href="/realisations" class="btn btn-secondary">Voir les projets</a>
+        </div>
+      </div>
+      <div class="hero-aside reveal reveal-delay">
+        <article class="editorial-panel">
+          <p class="panel-kicker">Direction</p>
+          <h2>Une base blanche, élégante et réutilisable.</h2>
+          <p>Navigation unifiée, composants partagés, sections modulaires et style globalisé pour garder la même signature sur chaque page.</p>
+        </article>
+        <div class="stats-stack">
+          <article class="stat-card">
+            <span>Pages reliées</span>
+            <strong>5</strong>
+          </article>
+          <article class="stat-card">
+            <span>Système visuel</span>
+            <strong>Global</strong>
+          </article>
+          <article class="stat-card">
+            <span>Approche</span>
+            <strong>Marque blanche</strong>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <div class="metrics-inline reveal">
+        <article class="metric-inline-item">
+          <h3 class="counter" data-target="<%= site.socialProof.projects %>">0</h3>
+          <p>Projets livres</p>
+        </article>
+        <article class="metric-inline-item">
+          <h3><span class="counter" data-target="<%= site.socialProof.conversionLift %>">0</span>%</h3>
+          <p>Gain de conversion</p>
+        </article>
+        <article class="metric-inline-item">
+          <h3><span class="counter" data-target="<%= site.socialProof.satisfaction %>">0</span>%</h3>
+          <p>Satisfaction</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Pourquoi Thaneros</p>
+          <h2>Minimaliste dans la forme, stratégique dans la structure.</h2>
+      </div>
+      <div class="cards-grid">
+        <article class="feature-card reveal">
+          <p class="chip">01</p>
+          <h3>Direction artistique premium</h3>
+          <p>Une esthétique sombre et éditoriale inspirée de tes templates, unifiée dans une seule feuille de style.</p>
+        </article>
+        <article class="feature-card reveal">
+          <p class="chip">02</p>
+          <h3>Architecture claire</h3>
+          <p>Des partials et des blocs répétables pour lier les pages entre elles sans recopier le même HTML partout.</p>
+        </article>
+        <article class="feature-card reveal">
+          <p class="chip">03</p>
+          <h3>Performance native</h3>
+          <p>Une base Express/EJS légère, des animations sobres et un balisage propre pour rester fluide sur mobile et desktop.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container split-grid">
+      <div class="reveal">
+        <p class="eyebrow">Pages connectées</p>
+        <h2>Chaque page pousse naturellement vers la suivante.</h2>
+      </div>
+      <div class="timeline reveal reveal-delay">
+        <article>
+          <span class="chip">Accueil</span>
+          <p>Positionne la promesse et redirige vers services, réalisations et contact.</p>
+        </article>
+        <article>
+          <span class="chip">Services</span>
+          <p>Détaille l'offre et renvoie vers les projets et la prise de contact.</p>
+        </article>
+        <article>
+          <span class="chip">Réalisations</span>
+          <p>Donne des cas d'usage et rassure avant la page à propos ou contact.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <%- include('../partials/final-cta', {
+    eyebrow: 'Prêt à déployer',
+    title: 'Une base premium, modulaire et prête à être adaptée à d’autres clients.',
+    description: 'On garde la signature des templates tout en la rendant propre, factorisée et navigable.',
+    primaryLabel: 'Parler du projet',
+    primaryHref: '/contact',
+    secondaryLabel: 'Voir les services',
+    secondaryHref: '/services'
+  }) %>
+</main>
+
+<%- include('../partials/footer') %>
+<%- include('../partials/scripts') %>

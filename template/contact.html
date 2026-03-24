@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact | Thaneros - Digital Architects of the Future</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#050A18",
+              "surface": "#080e1c",
+              "primary": "#e9c176",
+              "on-background": "#dde2f6",
+              "on-surface": "#dde2f6",
+              "outline": "#45464c",
+            },
+            fontFamily: {
+              "headline": ["Noto Serif", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .gold-glow {
+        box-shadow: 0 0 20px rgba(233, 193, 118, 0.15);
+      }
+      .gold-button-hover:hover {
+        box-shadow: 0 0 30px rgba(233, 193, 118, 0.3);
+        transform: scale(0.99);
+      }
+      .input-underlined {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(69, 70, 76, 0.4);
+        border-radius: 0;
+      }
+      .input-underlined:focus {
+        border-bottom: 1px solid #e9c176;
+        ring: 0;
+        outline: none;
+      }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30">
+<!-- TopNavBar (Shared Component style) -->
+<nav class="fixed top-0 w-full z-50 bg-[#050A18]/80 backdrop-blur-xl shadow-xl shadow-[#050a18]/40">
+<div class="flex justify-between items-center w-full px-12 py-6 max-w-[1440px] mx-auto">
+<div class="text-2xl font-serif tracking-tighter text-[#e9c176]">Thaneros</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-[#dde2f6] hover:text-[#e9c176] transition-colors duration-300 font-medium tracking-tight" href="#">Services</a>
+<a class="text-[#dde2f6] hover:text-[#e9c176] transition-colors duration-300 font-medium tracking-tight" href="#">Projets</a>
+<a class="text-[#dde2f6] hover:text-[#e9c176] transition-colors duration-300 font-medium tracking-tight" href="#">À Propos</a>
+<a class="text-[#e9c176] font-semibold border-b border-[#e9c176]/30 pb-1" href="#">Contact</a>
+</div>
+<button class="bg-[#e9c176] text-[#050A18] px-8 py-3 rounded-none font-serif font-bold text-sm tracking-tight gold-button-hover transition-all duration-300">Lancer un Projet</button>
+</div>
+</nav>
+<main class="pt-48 pb-32 px-12 max-w-[1440px] mx-auto">
+<!-- Header Section -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 mb-32 items-end">
+<div class="md:col-span-8">
+<span class="text-[#e9c176] font-body text-[0.65rem] uppercase tracking-[0.2em] mb-6 block font-bold">Demandes &amp; Partenariats</span>
+<h1 class="text-6xl md:text-8xl font-serif text-[#dde2f6] leading-[1.1] tracking-tighter italic">Architecte de Votre <br/>Vision Digitale.</h1>
+</div>
+<div class="md:col-span-4 pb-4">
+<p class="text-[#dde2f6]/60 text-lg leading-relaxed font-light max-w-sm">Qu'il s'agisse d'un site vitrine ou d'un écosystème propulsé par l'IA, nous concevons des expériences de précision pour l'atelier moderne.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
+<!-- Contact Form Section -->
+<section class="relative">
+<h2 class="text-[#e9c176] font-serif text-3xl font-light mb-12 italic">Dites-nous tout</h2>
+<form class="space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="space-y-1">
+<label class="text-[0.6rem] font-bold text-[#dde2f6]/40 uppercase tracking-[0.1em]">Nom Complet</label>
+<input class="input-underlined w-full py-3 px-0 text-[#dde2f6] placeholder:text-[#dde2f6]/20 transition-all" placeholder="Jean Dupont" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-[0.6rem] font-bold text-[#dde2f6]/40 uppercase tracking-[0.1em]">Email Professionnel</label>
+<input class="input-underlined w-full py-3 px-0 text-[#dde2f6] placeholder:text-[#dde2f6]/20 transition-all" placeholder="jean@startup.io" type="email"/>
+</div>
+</div>
+<div class="space-y-6">
+<label class="text-[0.6rem] font-bold text-[#dde2f6]/40 uppercase tracking-[0.1em]">Type de Projet</label>
+<div class="flex flex-wrap gap-4">
+<label class="cursor-pointer group">
+<input class="sr-only peer" name="project_type" type="radio"/>
+<span class="text-xs text-[#dde2f6]/40 border border-[#dde2f6]/10 px-6 py-2 rounded-full peer-checked:border-[#e9c176] peer-checked:text-[#e9c176] group-hover:border-[#dde2f6]/30 transition-all inline-block">Site Vitrine</span>
+</label>
+<label class="cursor-pointer group">
+<input class="sr-only peer" name="project_type" type="radio"/>
+<span class="text-xs text-[#dde2f6]/40 border border-[#dde2f6]/10 px-6 py-2 rounded-full peer-checked:border-[#e9c176] peer-checked:text-[#e9c176] group-hover:border-[#dde2f6]/30 transition-all inline-block">Application Web</span>
+</label>
+<label class="cursor-pointer group">
+<input class="sr-only peer" name="project_type" type="radio"/>
+<span class="text-xs text-[#dde2f6]/40 border border-[#dde2f6]/10 px-6 py-2 rounded-full peer-checked:border-[#e9c176] peer-checked:text-[#e9c176] group-hover:border-[#dde2f6]/30 transition-all inline-block">ML / AI</span>
+</label>
+</div>
+</div>
+<div class="space-y-1">
+<label class="text-[0.6rem] font-bold text-[#dde2f6]/40 uppercase tracking-[0.1em]">Votre Message</label>
+<textarea class="input-underlined w-full py-3 px-0 text-[#dde2f6] placeholder:text-[#dde2f6]/20 transition-all min-h-[120px] resize-none" placeholder="Décrivez vos ambitions..." rows="4"></textarea>
+</div>
+<button class="bg-[#e9c176] text-[#050A18] py-6 px-12 rounded-none font-serif font-bold text-lg tracking-tight gold-button-hover transition-all w-full md:w-auto" type="submit">
+                    Lançons Votre Projet
+                </button>
+</form>
+</section>
+<!-- Info & Map Section -->
+<div class="flex flex-col gap-16">
+<!-- Info Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="group">
+<div class="w-10 h-10 flex items-center justify-center mb-6 border border-[#e9c176]/20 text-[#e9c176]">
+<span class="material-symbols-outlined !text-xl" data-icon="alternate_email">alternate_email</span>
+</div>
+<h3 class="text-[#dde2f6] font-serif text-lg mb-4 italic">Canaux Directs</h3>
+<p class="text-[#dde2f6]/50 text-sm mb-1 font-light">hello@thaneros.studio</p>
+<p class="text-[#dde2f6]/50 text-sm font-light">partners@thaneros.studio</p>
+</div>
+<div class="group">
+<div class="w-10 h-10 flex items-center justify-center mb-6 border border-[#e9c176]/20 text-[#e9c176]">
+<span class="material-symbols-outlined !text-xl" data-icon="forum">forum</span>
+</div>
+<h3 class="text-[#dde2f6] font-serif text-lg mb-4 italic">Réseaux Sociaux</h3>
+<p class="text-[#dde2f6]/50 text-sm mb-1 font-light">LinkedIn / Thaneros</p>
+<p class="text-[#dde2f6]/50 text-sm font-light">Twitter / @ThanerosHQ</p>
+</div>
+</div>
+<!-- Office Location -->
+<div class="relative flex-grow min-h-[400px] border border-[#45464c]/15 overflow-hidden group">
+<div class="absolute top-8 left-8 z-10">
+<div class="flex items-center gap-3 mb-1">
+<div class="w-1 h-1 rounded-full bg-[#e9c176] shadow-[0_0_8px_#e9c176]"></div>
+<span class="text-[#e9c176] text-[0.6rem] font-bold uppercase tracking-[0.2em]">Demandes &amp; Partenariats</span>
+</div>
+<h3 class="text-[#dde2f6] font-serif text-2xl italic">Paris, France</h3>
+<p class="text-[#dde2f6]/40 text-sm font-light">128 Rue de Rivoli, 75001 Paris</p>
+</div>
+<img alt="Office Map Location" class="w-full h-full object-cover grayscale opacity-20 brightness-50 transition-transform duration-700 group-hover:scale-105" data-alt="Abstract dark minimalist map of Paris France" data-location="Paris" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsNneZOOCmnfNGzUSdcrxPn-VCRPpPxa-4f3PZWhCUyRTkbjeqZjVOHJTiJDtoRjcq35OzI9eiPjz-aZp159xQ6zqOyl7enbQj-0xmVpqiSLQRNeIgiHn5AYEJ5OrDc2qTdE2MoXfWwBzhOWwcvVbcmnGLT-Rxhts8VhgWivr5P6Cij81WBwu1fPLLZbTjFXnvaQQ8irGJzh2cfmqJpVwSLZKvyNJ5LisI1q3Fxlb8brpXEL6kxbN-3jAvX5kquNWx1mst4m6mk6II"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#050A18] via-transparent to-transparent"></div>
+<!-- Pulse Point on Map -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="relative flex items-center justify-center">
+<div class="absolute w-16 h-16 border border-[#e9c176]/10 rounded-full animate-ping"></div>
+<div class="relative w-3 h-3 bg-[#e9c176] rounded-full ring-4 ring-[#050A18]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component style) -->
+<footer class="bg-[#080e1c] full-width py-20 px-12 border-t border-[#45464c]/15">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-16">
+<div class="md:col-span-1">
+<div class="text-xl font-serif text-[#dde2f6] mb-6">Thaneros</div>
+<p class="text-[#dde2f6]/60 text-sm leading-relaxed font-light">© 2024 Thaneros. Tous droits réservés. Conçu pour le Midnight Atelier.</p>
+</div>
+<div>
+<h4 class="text-[#e9c176] font-serif italic mb-8 text-sm uppercase tracking-widest">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="text-[#dde2f6]/60 hover:text-[#e9c176] transition-all duration-300 text-sm font-light" href="#">Services</a></li>
+<li><a class="text-[#dde2f6]/60 hover:text-[#e9c176] transition-all duration-300 text-sm font-light" href="#">Projets</a></li>
+<li><a class="text-[#dde2f6]/60 hover:text-[#e9c176] transition-all duration-300 text-sm font-light" href="#">À Propos</a></li>
+<li><a class="text-[#e9c176] underline decoration-1 underline-offset-4 text-sm font-light" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#e9c176] font-serif italic mb-8 text-sm uppercase tracking-widest">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-[#dde2f6]/60 hover:text-[#e9c176] transition-all duration-300 text-sm font-light" href="#">Politique de Confidentialité</a></li>
+<li><a class="text-[#dde2f6]/60 hover:text-[#e9c176] transition-all duration-300 text-sm font-light" href="#">Conditions d'Utilisation</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#e9c176] font-serif italic mb-8 text-sm uppercase tracking-widest">La Lettre de l'Atelier</h4>
+<div class="flex gap-4">
+<input class="input-underlined w-full py-2 text-sm text-[#dde2f6] placeholder:text-[#dde2f6]/20" placeholder="Votre Email" type="email"/>
+<button class="text-[#e9c176] hover:scale-105 transition-all">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

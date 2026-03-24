@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#050A18",
+              "surface": "#080e1c",
+              "surface-variant": "#121826",
+              "primary": "#e9c176", // Gold/Champagne for premium feel
+              "on-background": "#dde2f6",
+              "on-surface": "#dde2f6",
+              "on-surface-variant": "#a0a5b8",
+              "outline": "#45464c",
+              "outline-variant": "#2f3444",
+            },
+            fontFamily: {
+              "headline": ["Noto Serif", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "2px", "xl": "4px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .premium-border {
+            border: 1px solid rgba(233, 193, 118, 0.15);
+        }
+        .serif-italic {
+            font-family: 'Noto Serif', serif;
+            font-style: italic;
+        }
+        .letter-spacing-tight {
+            letter-spacing: -0.02em;
+        }
+        .all-caps-label {
+            text-transform: uppercase;
+            letter-spacing: 0.05rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-background">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#050A18]/80 backdrop-blur-xl shadow-xl shadow-[#050a18]/40">
+<div class="flex justify-between items-center w-full px-12 py-6 max-w-[1440px] mx-auto">
+<span class="text-2xl font-serif tracking-tighter text-[#e9c176]">Thaneros</span>
+<div class="hidden md:flex items-center gap-12">
+<a class="text-[#dde2f6] hover:text-[#e9c176] transition-colors duration-300 font-label all-caps-label" href="#">Services</a>
+<a class="text-[#e9c176] font-semibold border-b border-[#e9c176]/30 pb-1 font-label all-caps-label" href="#">À Propos</a>
+<a class="text-[#dde2f6] hover:text-[#e9c176] transition-colors duration-300 font-label all-caps-label" href="#">Contact</a>
+</div>
+<button class="bg-transparent border border-[#e9c176] text-[#e9c176] font-label all-caps-label px-8 py-3 hover:bg-[#e9c176] hover:text-[#050A18] transition-all duration-300 transform active:scale-[0.99]">Démarrer un projet</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="pt-52 pb-32 px-12 max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
+<div class="lg:col-span-7">
+<div class="flex items-center gap-4 mb-8">
+<div class="h-[1px] w-12 bg-primary"></div>
+<span class="text-primary all-caps-label">Les Architectes du Numérique</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-headline font-light text-on-background leading-[1.05] mb-10 letter-spacing-tight">Ingénierie de <span class="serif-italic">Distinction</span> pour l'ère numérique</h1>
+<p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed font-light">Chez Thaneros, nous définissons l'intersection entre l'ingénierie de précision et le design de prestige. Nous concevons des écosystèmes numériques sur mesure pour les marques qui n'exigent rien de moins que la perfection.</p>
+</div>
+<div class="lg:col-span-5">
+<div class="relative group">
+<div class="absolute -inset-4 premium-border -z-10 transition-transform duration-700 group-hover:scale-105"></div>
+<img alt="Sophisticated architectural office" class="w-full aspect-[4/5] object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-1000 shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMvjsnGy9PvdYrHzWdwAqRZryypcCREz1-X_e-EH9oMhdiHOv-KpnZsG3ttWOU_HOQGUgs26K14RRAhMvZwUq1j--tlZ0jixiWiaA_y-mee3V6A5b9GzZEuX9fdwaGnFOPOQ1rfIe8dqAzTspw-mo6cOQCW2voL1rpvXECld1mznEll4X0Uz3Hj8ROhA_6cusrZWgub12RQTNwnSbt4wPvBhuWuXdatF5FamwAs65Me61pJGP-zNZougpHbxtRdiBlsV4LTX3rajMm"/>
+</div>
+</div>
+</section>
+<!-- Vision Section -->
+<section class="py-32 bg-surface">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-32 items-start">
+<div>
+<span class="text-primary all-caps-label mb-6 block">Notre Vision</span>
+<h2 class="text-5xl font-headline font-light text-on-background mb-8 leading-tight letter-spacing-tight">Définir le <span class="serif-italic">futur</span> du luxe haute performance.</h2>
+</div>
+<div class="space-y-8">
+<p class="text-on-surface-variant text-lg leading-relaxed font-light italic border-l-2 border-primary/20 pl-8">"Nous croyons que la véritable innovation est silencieuse. C'est la performance invisible derrière une interface sublime qui crée une valeur durable pour les entreprises les plus ambitieuses du monde."</p>
+<p class="text-on-surface-variant text-lg leading-relaxed font-light">Notre philosophie s'enracine dans le concept de « l'Atelier de Minuit » — là où l'artisanat rigoureux rencontre la pensée visionnaire. Nous ne nous contentons pas de construire ; nous composons des expériences numériques qui résonnent avec autorité et grâce.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Tech Expertise Grid -->
+<section class="py-40 px-12 max-w-[1440px] mx-auto">
+<div class="text-center mb-24">
+<span class="text-primary all-caps-label mb-4 block">Expertises</span>
+<h2 class="text-5xl md:text-6xl font-headline font-light text-on-background letter-spacing-tight mb-6">Maestros <span class="serif-italic">Techniques</span></h2>
+<div class="h-[1px] w-32 bg-primary/30 mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Backend -->
+<div class="premium-border p-12 hover:bg-surface-variant/50 transition-all duration-500 flex flex-col justify-between group h-[500px]">
+<div>
+<span class="material-symbols-outlined text-primary !text-4xl mb-8" data-icon="architecture">architecture</span>
+<h3 class="text-3xl font-headline font-light text-white mb-6">Architecture Backend</h3>
+<p class="text-on-surface-variant leading-relaxed font-light">Des systèmes à haute disponibilité conçus avec une précision chirurgicale. Nous donnons la priorité à la stabilité, à la sécurité et à l'évolutivité infinie.</p>
+</div>
+<div class="pt-8 border-t border-outline-variant">
+<span class="all-caps-label text-primary flex items-center gap-2 group-hover:gap-4 transition-all">Voir les détails <span class="material-symbols-outlined !text-sm">arrow_forward</span></span>
+</div>
+</div>
+<!-- Intelligence -->
+<div class="premium-border p-12 hover:bg-surface-variant/50 transition-all duration-500 flex flex-col justify-between group h-[500px]">
+<div>
+<span class="material-symbols-outlined text-primary !text-4xl mb-8" data-icon="cognition">cognition</span>
+<h3 class="text-3xl font-headline font-light text-white mb-6">Intégration Neurale</h3>
+<p class="text-on-surface-variant leading-relaxed font-light">Des modèles sophistiqués d'IA et d'apprentissage automatique intégrés de manière fluide à vos flux de travail pour fournir une intelligence exploitable.</p>
+</div>
+<div class="pt-8 border-t border-outline-variant">
+<span class="all-caps-label text-primary flex items-center gap-2 group-hover:gap-4 transition-all">Voir les détails <span class="material-symbols-outlined !text-sm">arrow_forward</span></span>
+</div>
+</div>
+<!-- Security -->
+<div class="premium-border p-12 hover:bg-surface-variant/50 transition-all duration-500 flex flex-col justify-between group h-[500px]">
+<div>
+<span class="material-symbols-outlined text-primary !text-4xl mb-8" data-icon="encrypted">encrypted</span>
+<h3 class="text-3xl font-headline font-light text-white mb-6">Résilience Cybernétique</h3>
+<p class="text-on-surface-variant leading-relaxed font-light">Au-delà de la sécurité de base. Nous mettons en œuvre des cadres Zero Trust qui protègent vos actifs numériques avec le plus haut niveau de chiffrement.</p>
+</div>
+<div class="pt-8 border-t border-outline-variant">
+<span class="all-caps-label text-primary flex items-center gap-2 group-hover:gap-4 transition-all">Voir les détails <span class="material-symbols-outlined !text-sm">arrow_forward</span></span>
+</div>
+</div>
+</div>
+</section>
+<!-- Culture Section -->
+<section class="py-32 px-12 max-w-[1440px] mx-auto bg-background">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="relative order-2 lg:order-1">
+<img alt="Modern minimalist workspace" class="w-full aspect-video object-cover grayscale brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiEZ2hfuVho1449uqYHoz3y5iQOdUFtDIcM4gcIDND0jnbSXjtu_tLChbcIuARdHlGE7Rm6vRwpZRpmt85yIsvXJBEe1BIs_QL588fd624u6QdDWsrrJd9hi_VNWLfSCRBoGCz4E9toYQDHj62L-QkHHfYujlvs627dRUWTzmCMTmR5CnAYn4pmqglg8ORA4hx2AdSNvo-LXnLfHfuBrpTjO3MrgY9CWw2OEdDCv4ap98ckHtYX8-ZIG86Zx9s9wWL4a-E8Ae04Wx6"/>
+<div class="absolute -bottom-12 -right-12 bg-surface p-12 premium-border hidden md:block">
+<p class="text-primary font-headline text-3xl mb-2 italic">L'Excellence</p>
+<p class="all-caps-label text-on-surface-variant">n'est pas un acte, mais une habitude.</p>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<span class="text-primary all-caps-label mb-6 block">Notre Culture</span>
+<h2 class="text-5xl font-headline font-light text-on-background mb-8 leading-tight letter-spacing-tight">Les Artisans du <span class="serif-italic">Silence</span></h2>
+<p class="text-on-surface-variant text-lg leading-relaxed font-light mb-10">Nous cultivons un environnement d'autonomie radicale et de rigueur intellectuelle. Dans notre atelier, les designers comprennent l'élégance d'une API propre, et les ingénieurs apprécient la puissance de l'espace négatif.</p>
+<div class="space-y-10">
+<div class="flex items-start gap-6 group">
+<div class="w-12 h-12 flex items-center justify-center border border-primary/20 group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-xl">workspace_premium</span>
+</div>
+<div>
+<h4 class="text-xl font-headline font-medium text-white mb-2">Code Artisanal</h4>
+<p class="text-sm text-on-surface-variant font-light">Des solutions conçues à la main, bâties pour la longévité et la performance.</p>
+</div>
+</div>
+<div class="flex items-start gap-6 group">
+<div class="w-12 h-12 flex items-center justify-center border border-primary/20 group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-xl">auto_awesome</span>
+</div>
+<div>
+<h4 class="text-xl font-headline font-medium text-white mb-2">Innovation Discrète</h4>
+<p class="text-sm text-on-surface-variant font-light">Intégrer les technologies de pointe sans jamais compromettre la sophistication.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-40 px-12 max-w-[1440px] mx-auto text-center">
+<div class="premium-border p-24 bg-surface-variant/30 relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+<h2 class="text-5xl md:text-7xl font-headline font-light text-white mb-12 letter-spacing-tight relative z-10">Prêt à sublimer votre <span class="serif-italic text-primary">héritage numérique</span> ?</h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-8 relative z-10">
+<button class="bg-[#e9c176] text-[#050A18] all-caps-label px-12 py-5 hover:scale-[1.02] transition-all duration-500 shadow-2xl shadow-primary/20">Consulter un Architecte</button>
+<button class="border border-outline text-white all-caps-label px-12 py-5 hover:border-primary transition-all duration-500">Voir le Portfolio</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#080e1c] py-20 px-12 border-t border-[#45464c]/15">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-16">
+<div class="md:col-span-1">
+<div class="text-xl font-serif text-[#dde2f6] mb-6">Thaneros</div>
+<p class="text-[#dde2f6]/60 font-body text-sm leading-relaxed mb-8">Architectes numériques du futur. Façonné pour l'Atelier de Minuit.</p>
+<div class="flex gap-6">
+<a class="text-[#dde2f6]/60 hover:text-[#e9c176] transition-all" href="#"><span class="material-symbols-outlined !text-xl">language</span></a>
+<a class="text-[#dde2f6]/60 hover:text-[#e9c176] transition-all" href="#"><span class="material-symbols-outlined !text-xl">terminal</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-[#e9c176] serif-italic text-lg mb-8 italic">Services</h4>
+<ul class="space-y-4 text-sm font-body">
+<li><a class="text-[#dde2f6]/60 hover:text-[#e9c176] transition-all" href="#">Stratégie Numérique</a></li>
+<li><a class="text-[#dde2f6]/60 hover:text-[#e9c176] transition-all" href="#">Ingénierie Backend</a></li>
+<li><a class="text-[#dde2f6]/60 hover:text-[#e9c176] transition-all" href="#">Solutions IA</a></li>
+<li><a class="text-[#dde2f6]/60 hover:text-[#e9c176] transition-all" href="#">Atelier UI/UX</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#e9c176] serif-italic text-lg mb-8 italic">Services</h4>
+<ul class="space-y-4 text-sm font-body">
+<li><a class="text-[#e9c176] underline decoration-1 underline-offset-4" href="#">Stratégie Numérique</a></li>
+<li><a class="text-[#dde2f6]/60 hover:text-[#e9c176] transition-all" href="#">Ingénierie Backend</a></li>
+<li><a class="text-[#dde2f6]/60 hover:text-[#e9c176] transition-all" href="#">Solutions IA</a></li>
+<li><a class="text-[#dde2f6]/60 hover:text-[#e9c176] transition-all" href="#">Atelier UI/UX</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#e9c176] serif-italic text-lg mb-8 italic">Services</h4>
+<div class="relative">
+<input class="w-full bg-background border border-outline-variant rounded-none py-4 px-5 text-sm focus:ring-1 focus:ring-primary/40 focus:border-primary outline-none transition-all placeholder:text-on-surface-variant/40" placeholder="Votre adresse email" type="email"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-primary hover:translate-x-1 transition-transform">
+<span class="material-symbols-outlined">east</span>
+</button>
+</div>
+<p class="text-[10px] all-caps-label text-[#dde2f6]/40 mt-4">Rejoignez notre revue architecturale trimestrielle.</p>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-24 pt-8 border-t border-[#45464c]/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[#dde2f6]/40 font-body text-xs">© 2024 Thaneros. Tous droits réservés. Façonné pour l'Atelier de Minuit.</p>
+<div class="flex gap-8 text-[10px] all-caps-label text-[#dde2f6]/40">
+<span>PARIS</span>
+<span>LONDON</span>
+<span>TOKYO</span>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,16 @@
+<header class="site-header" id="top">
+  <div class="container nav-wrap">
+    <a href="/" class="brand"><%= site.companyName %></a>
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav" id="mainNav">
+      <% site.nav.forEach((item) => { %>
+        <a href="<%= item.href %>" class="<%= currentPath === item.href ? 'active' : '' %>"><%= item.label %></a>
+      <% }); %>
+      <a href="/contact" class="btn btn-sm">Initier un projet</a>
+    </nav>
+  </div>
+</header>

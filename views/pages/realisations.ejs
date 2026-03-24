@@ -1,0 +1,46 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+
+<main>
+  <%- include('../partials/page-hero', {
+    eyebrow: 'Réalisations',
+    title: 'Des expériences web qui renforcent la valeur perçue.',
+    description: 'Une sélection de cas d’usage pour illustrer la direction éditoriale, la clarté du parcours et la logique de conversion.'
+  }) %>
+
+  <section class="section">
+    <div class="container project-grid">
+      <article class="project-card reveal">
+        <p class="chip">Cabinet conseil</p>
+        <h3>Refonte institutionnelle haut de gamme</h3>
+        <p>Repositionnement éditorial, sections condensées et nouveau flux de prise de contact pour renforcer la crédibilité.</p>
+        <a href="/contact" class="text-link">Démarrer un projet similaire</a>
+      </article>
+      <article class="project-card reveal">
+        <p class="chip">E-commerce B2B</p>
+        <h3>Landing pages de conversion</h3>
+        <p>Nouveau storytelling produit, architecture plus lisible et mise en avant des points de preuve pour accélérer les rendez-vous.</p>
+        <a href="/services" class="text-link">Explorer les expertises</a>
+      </article>
+      <article class="project-card reveal">
+        <p class="chip">Agence locale</p>
+        <h3>Template marque blanche multi-clients</h3>
+        <p>Système réutilisable avec composants communs, navigation partagée et CSS centralisé pour réduire les délais de production.</p>
+        <a href="/a-propos" class="text-link">Voir l’approche du studio</a>
+      </article>
+    </div>
+  </section>
+
+  <%- include('../partials/final-cta', {
+    eyebrow: 'Suite du parcours',
+    title: 'Les réalisations rassurent, puis la page à propos installe la posture du studio.',
+    description: 'On construit un enchaînement naturel entre preuve, vision et prise de contact.',
+    primaryLabel: 'Découvrir le studio',
+    primaryHref: '/a-propos',
+    secondaryLabel: 'Nous contacter',
+    secondaryHref: '/contact'
+  }) %>
+</main>
+
+<%- include('../partials/footer') %>
+<%- include('../partials/scripts') %>

@@ -1,0 +1,60 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+
+<main>
+  <%- include('../partials/page-hero', {
+    eyebrow: 'À propos',
+    title: 'Une approche exigeante pour des sites qui inspirent confiance.',
+    description: 'Le studio se présente comme un atelier digital capable de transformer des maquettes fortes en une base robuste, maintenable et adaptable.'
+  }) %>
+
+  <section class="section">
+    <div class="container split-grid">
+      <div class="reveal">
+        <h2>Notre vision</h2>
+        <p>Chez Thaneros, chaque site doit porter une promesse claire : une expérience fluide, élégante et crédible dès les premiers instants.</p>
+        <p>La forme premium compte, mais elle doit reposer sur une exécution propre, maintenable et assez modulaire pour vivre longtemps.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay">
+        <h3>Principes de production</h3>
+        <ul class="list-clean">
+          <li>Design system cohérent</li>
+          <li>Code maintenable et modulaire</li>
+          <li>Performance et sécurité dès la base</li>
+          <li>Vision business orientée résultats</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container cards-grid">
+      <article class="feature-card reveal">
+        <p class="chip">Culture</p>
+        <h3>Code artisanal</h3>
+        <p>Chaque bloc sert une intention claire et reste assez propre pour être repris dans d’autres projets.</p>
+      </article>
+      <article class="feature-card reveal">
+        <p class="chip">Structure</p>
+        <h3>Innovation discrète</h3>
+        <p>Des effets visuels mesurés, une navigation simple et une feuille de style globale plutôt qu’un empilement local.</p>
+      </article>
+      <article class="feature-card reveal">
+        <p class="chip">Execution</p>
+        <h3>Base évolutive</h3>
+        <p>La marque, les contenus et les sections peuvent changer sans devoir reconstruire tout le site.</p>
+      </article>
+    </div>
+  </section>
+
+  <%- include('../partials/final-cta', {
+    eyebrow: 'Passer à l’action',
+    title: 'La vision est posée, il reste à cadrer le prochain projet.',
+    description: 'Le meilleur point de sortie depuis cette page est une prise de contact simple et directe.',
+    primaryLabel: 'Contacter Thaneros',
+    primaryHref: '/contact'
+  }) %>
+</main>
+
+<%- include('../partials/footer') %>
+<%- include('../partials/scripts') %>

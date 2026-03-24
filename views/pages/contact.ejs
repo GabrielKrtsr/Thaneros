@@ -1,0 +1,65 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+
+<main>
+  <%- include('../partials/page-hero', {
+    eyebrow: 'Contact',
+    title: 'Parlons de votre futur site vitrine premium.',
+    description: 'Qu’il s’agisse d’une refonte, d’une base blanche ou d’une intégration complète à partir de maquettes existantes, le parcours se termine ici.'
+  }) %>
+
+  <section class="section">
+    <div class="container contact-layout">
+      <div class="reveal">
+        <h2>Un projet en tête ?</h2>
+        <p>Partagez tes objectifs, ton délai et le niveau de personnalisation attendu. On revient avec une approche claire et exploitable.</p>
+        <div class="contact-card">
+          <p><strong>Email :</strong> <%= site.email %></p>
+          <p><strong>Téléphone :</strong> <%= site.phone %></p>
+          <p><strong>Localisation :</strong> <%= site.address %></p>
+        </div>
+        <div class="contact-card">
+          <p class="chip">Parcours recommandé</p>
+          <p>Accueil -> Services -> Réalisations -> À propos -> Contact</p>
+        </div>
+      </div>
+
+      <form class="contact-form reveal reveal-delay" action="/contact" method="post" novalidate>
+        <% if (status === 'ok') { %>
+          <p class="alert success">Merci, votre demande a bien été envoyée.</p>
+        <% } %>
+        <% if (status === 'invalid') { %>
+          <p class="alert error">Merci de vérifier les champs requis et le format de l'email.</p>
+        <% } %>
+        <% if (status === 'error') { %>
+          <p class="alert error">Une erreur est survenue. Merci de réessayer.</p>
+        <% } %>
+        <% if (status === 'rate-limited') { %>
+          <p class="alert error">Limite atteinte : 5 demandes maximum par heure. Merci de réessayer plus tard.</p>
+        <% } %>
+
+        <label for="fullname">Nom complet *</label>
+        <input id="fullname" name="fullname" type="text" required minlength="2" maxlength="120" />
+
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="company">Entreprise</label>
+        <input id="company" name="company" type="text" maxlength="120" />
+
+        <label for="projectType">Type de projet</label>
+        <input id="projectType" name="projectType" type="text" maxlength="120" placeholder="Site vitrine, refonte, template…" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+
+        <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" />
+
+        <button type="submit" class="btn">Envoyer la demande</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<%- include('../partials/footer') %>
+<%- include('../partials/scripts') %>
