@@ -1,0 +1,36 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldLine" x1="240" y1="430" x2="960" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="rgb(233 193 118)" stop-opacity="0.24"/>
+      <stop offset="0.2" stop-color="rgb(233 193 118)" stop-opacity="0.8"/>
+      <stop offset="0.5" stop-color="rgb(233 193 118)" stop-opacity="1"/>
+      <stop offset="0.8" stop-color="rgb(233 193 118)" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="rgb(233 193 118)" stop-opacity="0.24"/>
+    </linearGradient>
+    <filter id="softGlow" x="185" y="215" width="830" height="520" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="8" result="effect1_foregroundBlur"/>
+    </filter>
+  </defs>
+
+  <g opacity="0.95">
+    <g filter="url(#softGlow)" opacity="0.4">
+      <path d="M300 300H900L980 390L600 690L220 390L300 300Z" stroke="url(#goldLine)" stroke-width="18" stroke-linejoin="round"/>
+    </g>
+
+    <path d="M300 300H900L980 390L600 690L220 390L300 300Z" stroke="url(#goldLine)" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M220 390H980" stroke="url(#goldLine)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M300 300L380 390" stroke="url(#goldLine)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M460 300L380 390" stroke="url(#goldLine)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M460 300L540 390" stroke="url(#goldLine)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M620 300L540 390" stroke="url(#goldLine)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M620 300L700 390" stroke="url(#goldLine)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M780 300L700 390" stroke="url(#goldLine)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M780 300L860 390" stroke="url(#goldLine)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M900 300L860 390" stroke="url(#goldLine)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M380 390L600 690" stroke="url(#goldLine)" stroke-width="13" stroke-linecap="round"/>
+    <path d="M600 390L600 690" stroke="url(#goldLine)" stroke-width="13" stroke-linecap="round"/>
+    <path d="M820 390L600 690" stroke="url(#goldLine)" stroke-width="13" stroke-linecap="round"/>
+  </g>
+</svg>
