@@ -1,244 +1,102 @@
-<!DOCTYPE html>
-<html class="dark" lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><%= title %></title>
-  <meta name="description" content="<%= description %>" />
-  <meta name="theme-color" content="#050A18" />
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/styles.css" />
-  <script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            background: "#050A18",
-            surface: "#080e1c",
-            primary: "#e9c176",
-            "on-background": "#dde2f6",
-            "on-surface": "#dde2f6",
-            outline: "#45464c"
-          },
-          fontFamily: {
-            headline: ["Noto Serif", "serif"],
-            body: ["Manrope", "sans-serif"],
-            label: ["Manrope", "sans-serif"]
-          },
-          borderRadius: {
-            DEFAULT: "0.125rem",
-            lg: "0.25rem",
-            xl: "0.5rem",
-            full: "0.75rem"
-          }
-        }
-      }
-    };
-  </script>
-  <style>
-    .material-symbols-outlined {
-      font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
-    }
-
-    .gold-glow {
-      box-shadow: 0 0 20px rgba(233, 193, 118, 0.15);
-    }
-
-    .gold-button-hover:hover {
-      box-shadow: 0 0 30px rgba(233, 193, 118, 0.3);
-      transform: scale(0.99);
-    }
-
-    .input-underlined {
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid rgba(69, 70, 76, 0.4);
-      border-radius: 0;
-      color: #0f172a;
-      caret-color: #0f172a;
-    }
-
-    .input-underlined:focus {
-      border-bottom: 1px solid #e9c176;
-      outline: none;
-      box-shadow: none;
-    }
-
-    .input-underlined::placeholder {
-      color: rgba(221, 226, 246, 0.35);
-    }
-
-    .input-underlined:-webkit-autofill,
-    .input-underlined:-webkit-autofill:hover,
-    .input-underlined:-webkit-autofill:focus {
-      -webkit-text-fill-color: #0f172a;
-      -webkit-box-shadow: 0 0 0 1000px transparent inset;
-      transition: background-color 9999s ease-out 0s;
-    }
-  </style>
-</head>
-<body class="bg-background text-on-background font-body selection:bg-primary/30">
-
+<%- include('../partials/head') %>
 <%- include('../partials/header') %>
 
-  <main class="mx-auto max-w-[1440px] px-6 pb-24 pt-36 md:px-12 md:pb-32 md:pt-48">
-    <div class="mb-20 grid grid-cols-1 items-end gap-10 md:mb-32 md:grid-cols-12 md:gap-16">
-      <div class="md:col-span-8">
-        <span class="mb-6 block text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[#e9c176]">Demandes & partenariats</span>
-        <h1 class="font-headline text-5xl leading-[1.1] tracking-tighter text-[#dde2f6] md:text-8xl">
-          Architecte de votre
-          <br />
-          vision digitale.
-        </h1>
-      </div>
-      <div class="pb-4 md:col-span-4">
-        <p class="max-w-sm text-base font-light leading-relaxed text-[#dde2f6]/60 md:text-lg">
-          Qu'il s'agisse d'un site vitrine ou d'un &eacute;cosyst&egrave;me propuls&eacute; par l'IA, nous concevons des exp&eacute;riences de pr&eacute;cision pour l'atelier moderne.
-        </p>
-      </div>
-    </div>
+<main>
+  <%- include('../partials/page-hero', {
+    eyebrow: 'Contact',
+    title: "Parle-moi de ton projet, je te dirai ce qui est possible.",
+    description: "Que tu aies besoin d'un premier site, d'une refonte ou d'un site qui t'aide enfin a etre trouve sur Google, on peut commencer par un echange simple."
+  }) %>
 
-    <div class="grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-24">
-      <section class="relative">
-        <h2 class="mb-12 font-headline text-3xl font-light italic text-[#e9c176]">Dites-nous tout</h2>
+  <section class="section">
+    <div class="container contact-premium-grid">
+      <section class="contact-premium-form-wrap reveal">
+        <h2>Explique-moi ou tu en es</h2>
 
-        <form class="space-y-10 md:space-y-12" action="/contact" method="post" novalidate>
+        <form class="contact-premium-form" action="/contact" method="post" novalidate>
           <% if (status === 'ok') { %>
-            <p class="border border-emerald-400/20 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-200">Merci, votre demande a bien &eacute;t&eacute; envoy&eacute;e.</p>
+            <p class="alert success">Merci, ta demande a bien ete envoyee.</p>
           <% } %>
           <% if (status === 'invalid') { %>
-            <p class="border border-red-400/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">Merci de v&eacute;rifier les champs requis et le format de l'email.</p>
+            <p class="alert error">Verifie simplement les champs requis et ton adresse email.</p>
           <% } %>
           <% if (status === 'error') { %>
-            <p class="border border-red-400/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">Une erreur est survenue. Merci de r&eacute;essayer.</p>
+            <p class="alert error">Une erreur est survenue. Tu peux reessayer dans un instant.</p>
           <% } %>
           <% if (status === 'rate-limited') { %>
-            <p class="border border-red-400/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">Limite atteinte : 5 demandes maximum par heure. Merci de r&eacute;essayer plus tard.</p>
+            <p class="alert error">Tu as atteint la limite de messages pour le moment. Reessaie un peu plus tard.</p>
           <% } %>
 
-          <div class="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12">
-            <div class="space-y-1">
-              <label for="fullname" class="text-[0.6rem] font-bold uppercase tracking-[0.1em] text-[#dde2f6]/40">Nom complet</label>
-              <input id="fullname" name="fullname" type="text" required minlength="2" maxlength="120" class="input-underlined w-full px-0 py-3 text-[#dde2f6] placeholder:text-[#dde2f6]/20 transition-all" placeholder="Jean Dupont" />
+          <div class="contact-premium-two-col">
+            <div class="contact-premium-field">
+              <label for="fullname">Nom complet</label>
+              <input id="fullname" name="fullname" type="text" required minlength="2" maxlength="120" placeholder="Jean Dupont" />
             </div>
-            <div class="space-y-1">
-              <label for="email" class="text-[0.6rem] font-bold uppercase tracking-[0.1em] text-[#dde2f6]/40">Email professionnel</label>
-              <input id="email" name="email" type="email" required class="input-underlined w-full px-0 py-3 text-[#dde2f6] placeholder:text-[#dde2f6]/20 transition-all" placeholder="jean@startup.io" />
+            <div class="contact-premium-field">
+              <label for="email">Email professionnel</label>
+              <input id="email" name="email" type="email" required placeholder="jean@startup.io" />
             </div>
           </div>
 
-          <div class="space-y-1">
-            <label for="company" class="text-[0.6rem] font-bold uppercase tracking-[0.1em] text-[#dde2f6]/40">Entreprise</label>
-            <input id="company" name="company" type="text" maxlength="120" class="input-underlined w-full px-0 py-3 text-[#dde2f6] placeholder:text-[#dde2f6]/20 transition-all" placeholder="Nom de votre entreprise" />
+          <div class="contact-premium-field">
+            <label for="company">Entreprise</label>
+            <input id="company" name="company" type="text" maxlength="120" placeholder="Nom de votre entreprise" />
           </div>
 
-          <div class="space-y-6">
-            <label class="text-[0.6rem] font-bold uppercase tracking-[0.1em] text-[#dde2f6]/40">Type de projet</label>
-            <div class="flex flex-wrap gap-4">
-              <% ["Site vitrine", "Application web", "ML / AI"].forEach(function(option) { %>
-                <label class="cursor-pointer group">
-                  <input class="peer sr-only" name="projectType" type="radio" value="<%= option %>" />
-                  <span class="inline-block rounded-full border border-[#dde2f6]/10 px-6 py-2 text-xs text-[#dde2f6]/40 transition-all group-hover:border-[#dde2f6]/30 peer-checked:border-[#e9c176] peer-checked:text-[#e9c176]"><%= option %></span>
+          <div class="contact-premium-projects">
+            <p class="contact-premium-label">Type de projet</p>
+            <div class="contact-premium-choice-list">
+              <% ["Site vitrine", "Refonte", "SEO", "Autre"].forEach(function(option) { %>
+                <label class="contact-premium-choice">
+                  <input name="projectType" type="radio" value="<%= option %>" />
+                  <span><%= option %></span>
                 </label>
               <% }) %>
             </div>
           </div>
 
-          <div class="space-y-1">
-            <label for="message" class="text-[0.6rem] font-bold uppercase tracking-[0.1em] text-[#dde2f6]/40">Votre message</label>
-            <textarea id="message" name="message" rows="4" class="input-underlined min-h-[120px] w-full resize-none px-0 py-3 text-[#dde2f6] placeholder:text-[#dde2f6]/20 transition-all" placeholder="D&eacute;crivez vos ambitions..."></textarea>
+          <div class="contact-premium-field">
+            <label for="message">Ton message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Dis-moi ce que tu fais, ce dont tu as besoin, ou ce qui bloque aujourd'hui..."></textarea>
           </div>
 
-          <input class="hidden" type="text" name="website" tabindex="-1" autocomplete="off" />
+          <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" />
 
-          <div class="flex justify-center">
-            <button class="gold-button-hover w-full rounded-none bg-[#e9c176] px-12 py-5 text-lg font-bold tracking-tight text-[#050A18] transition-all md:w-auto font-headline" type="submit">
-              Lan&ccedil;ons votre projet
-            </button>
+          <div class="contact-premium-actions">
+            <button type="submit" class="btn">Envoyer ma demande</button>
           </div>
         </form>
       </section>
 
-      <div class="flex flex-col gap-16">
-        <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
-          <div class="group">
-            <div class="mb-6 flex h-10 w-10 items-center justify-center border border-[#e9c176]/20 text-[#e9c176]">
-              <span class="material-symbols-outlined !text-xl">alternate_email</span>
-            </div>
-            <h3 class="mb-4 font-headline text-lg italic text-[#dde2f6]">Canaux directs</h3>
-            <p class="mb-1 text-sm font-light text-[#dde2f6]/50"><%= site.email %></p>
-            <p class="text-sm font-light text-[#dde2f6]/50"><%= site.phone %></p>
-          </div>
-
-          <div class="group">
-            <div class="mb-6 flex h-10 w-10 items-center justify-center border border-[#e9c176]/20 text-[#e9c176]">
-              <span class="material-symbols-outlined !text-xl">forum</span>
-            </div>
-            <h3 class="mb-4 font-headline text-lg italic text-[#dde2f6]">Adresse</h3>
-            <p class="mb-1 text-sm font-light text-[#dde2f6]/50"><%= site.address %></p>
-            <p class="text-sm font-light text-[#dde2f6]/50">R&eacute;ponse sous 24 &agrave; 48h ouvr&eacute;es</p>
-          </div>
+      <aside class="contact-premium-aside reveal reveal-delay">
+        <div class="contact-premium-card">
+          <p class="chip">Premier echange</p>
+          <h3>On commence simplement, sans jargon et sans pression.</h3>
+          <p>Tu m'expliques ton activite, ton objectif et ton contexte. Je reviens vers toi avec une reponse claire sur ce qu'on peut faire ensemble.</p>
         </div>
 
-        <div class="group relative min-h-[400px] overflow-hidden border border-[#45464c]/15">
-          <div class="absolute left-8 top-8 z-10">
-            <div class="mb-1 flex items-center gap-3">
-              <div class="h-1 w-1 rounded-full bg-[#e9c176] shadow-[0_0_8px_#e9c176]"></div>
-              <span class="text-[0.6rem] font-bold uppercase tracking-[0.2em] text-[#e9c176]">Demandes & partenariats</span>
-            </div>
-            <h3 class="font-headline text-2xl italic text-[#dde2f6]">France</h3>
-            <p class="text-sm font-light text-[#dde2f6]/40"><%= site.address %></p>
-          </div>
-
-          <img alt="Illustration de contact Thaneros" class="h-full w-full object-cover opacity-20 grayscale brightness-50 transition-transform duration-700 group-hover:scale-105" src="/images/slide-3.svg" />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#050A18] via-transparent to-transparent"></div>
-
-          <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            <div class="relative flex items-center justify-center">
-              <div class="absolute h-16 w-16 animate-ping rounded-full border border-[#e9c176]/10"></div>
-              <div class="relative h-3 w-3 rounded-full bg-[#e9c176] ring-4 ring-[#050A18]"></div>
-            </div>
-          </div>
+        <div class="contact-premium-meta">
+          <article class="contact-premium-card">
+            <h4>Email</h4>
+            <p><%= site.email %></p>
+          </article>
+          <article class="contact-premium-card">
+            <h4>Telephone</h4>
+            <p><%= site.phone %></p>
+          </article>
+          <article class="contact-premium-card">
+            <h4>Adresse</h4>
+            <p><%= site.address %></p>
+          </article>
+          <article class="contact-premium-card">
+            <h4>Delai de reponse</h4>
+            <p>24 a 48h ouvrees</p>
+          </article>
         </div>
-      </div>
+      </aside>
     </div>
-  </main>
+  </section>
+</main>
 
-  <footer class="border-t border-[#45464c]/15 bg-[#080e1c] px-6 py-16 md:px-12 md:py-20">
-    <div class="mx-auto grid max-w-[1440px] grid-cols-1 gap-12 md:grid-cols-4 md:gap-16">
-      <div class="md:col-span-1">
-        <div class="mb-6 font-headline text-xl text-[#dde2f6]">Thaneros</div>
-        <p class="text-sm font-light leading-relaxed text-[#dde2f6]/60">&copy; 2026 Thaneros. Tous droits r&eacute;serv&eacute;s.</p>
-      </div>
-
-      <div>
-        <h4 class="mb-8 font-headline text-sm uppercase tracking-widest text-[#e9c176]">Navigation</h4>
-        <ul class="space-y-4">
-          <li><a class="text-sm font-light text-[#dde2f6]/60 transition-all duration-300 hover:text-[#e9c176]" href="/services">Services</a></li>
-          <li><a class="text-sm font-light text-[#dde2f6]/60 transition-all duration-300 hover:text-[#e9c176]" href="/realisations">Projets</a></li>
-          <li><a class="text-sm font-light text-[#dde2f6]/60 transition-all duration-300 hover:text-[#e9c176]" href="/a-propos">&Agrave; propos</a></li>
-          <li><a class="text-sm font-light text-[#e9c176] underline underline-offset-4" href="/contact">Contact</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="mb-8 font-headline text-sm uppercase tracking-widest text-[#e9c176]">Contact</h4>
-        <ul class="space-y-4">
-          <li class="text-sm font-light text-[#dde2f6]/60"><%= site.email %></li>
-          <li class="text-sm font-light text-[#dde2f6]/60"><%= site.phone %></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="mb-8 font-headline text-sm uppercase tracking-widest text-[#e9c176]">Parlons projet</h4>
-        <p class="text-sm font-light leading-relaxed text-[#dde2f6]/60">Une vision claire, un cadre premium, un échange simple pour lancer la suite.</p>
-      </div>
-    </div>
-  </footer>
-
+<%- include('../partials/footer') %>
 <%- include('../partials/scripts') %>

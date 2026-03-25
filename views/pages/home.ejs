@@ -5,20 +5,27 @@
   <section class="hero-shell">
     <div class="container hero-grid">
       <div class="reveal">
-        <p class="eyebrow">Atelier digital en marque blanche</p>
-        <h1>Architectes d'expériences digitales raffinées.</h1>
-        <p class="lead">Thaneros transforme tes templates en un site premium cohérent, modulaire et prêt à être dupliqué ou adapté à d'autres identités.</p>
+        <h1>Un site qui attire des clients. Et je m'occupe aussi de Google.</h1>
+        <p class="lead">Je construis ton site de A a Z, puis je le pense pour que tes clients te trouvent au bon moment. Tu n'as pas juste une vitrine en ligne. Tu as un outil qui travaille pour ton activite.</p>
         <div class="cta-row">
-          <a href="/contact" class="btn">Initier un projet</a>
-          <a href="/realisations" class="btn btn-secondary">Voir les projets</a>
+          <a href="/contact" class="btn">Parler de ton projet</a>
+          <a href="/services" class="btn btn-secondary">Voir comment je travaille</a>
         </div>
       </div>
-      <div class="hero-aside reveal reveal-delay">
-        <article class="editorial-panel">
-          <p class="panel-kicker">Direction</p>
-          <h2>Une base blanche, élégante et réutilisable.</h2>
-          <p>Navigation unifiée, composants partagés, sections modulaires et style globalisé pour garder la même signature sur chaque page.</p>
-        </article>
+      <div class="hero-carousel reveal reveal-delay" data-carousel>
+        <div class="hero-carousel-frame">
+          <div class="hero-carousel-track" data-carousel-track>
+            <article class="hero-carousel-slide" data-carousel-slide>
+              <img src="/images/hero-site-1.svg" alt="Apercu d'un site vitrine sobre et premium" />
+            </article>
+            <article class="hero-carousel-slide" data-carousel-slide>
+              <img src="/images/hero-site-2.svg" alt="Apercu d'un site de presentation avec sections structurées" />
+            </article>
+            <article class="hero-carousel-slide" data-carousel-slide>
+              <img src="/images/hero-site-3.svg" alt="Apercu d'un site professionnel avec grille editoriale" />
+            </article>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -32,11 +39,11 @@
         </article>
         <article class="metric-inline-item">
           <h3><span class="counter" data-target="<%= site.socialProof.conversionLift %>">0</span>%</h3>
-          <p>Gain de conversion</p>
+          <p>Gain moyen de demandes</p>
         </article>
         <article class="metric-inline-item">
           <h3><span class="counter" data-target="<%= site.socialProof.satisfaction %>">0</span>%</h3>
-          <p>Satisfaction</p>
+          <p>Clients satisfaits</p>
         </article>
       </div>
     </div>
@@ -45,24 +52,24 @@
   <section class="section">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow">Pourquoi Thaneros</p>
-          <h2>Minimaliste dans la forme, stratégique dans la structure.</h2>
+        <p class="eyebrow">Pourquoi me confier ton site</p>
+        <h2>Je pense au design, au message et a la visibilite en meme temps.</h2>
       </div>
       <div class="cards-grid">
         <article class="feature-card reveal">
           <p class="chip">01</p>
-          <h3>Direction artistique premium</h3>
-          <p>Une esthétique sombre et éditoriale inspirée de tes templates, unifiée dans une seule feuille de style.</p>
+          <h3>Ton site inspire confiance</h3>
+          <p>Des pages claires, un ton juste et une presentation propre pour que les visiteurs comprennent vite ce que tu fais et aient envie de te contacter.</p>
         </article>
         <article class="feature-card reveal">
           <p class="chip">02</p>
-          <h3>Architecture claire</h3>
-          <p>Des partials et des blocs répétables pour lier les pages entre elles sans recopier le même HTML partout.</p>
+          <h3>Google n'est pas ajoute apres coup</h3>
+          <p>Je prepare ton site pour qu'il puisse remonter sur les bonnes recherches, de la structure des pages jusqu'aux contenus essentiels.</p>
         </article>
         <article class="feature-card reveal">
           <p class="chip">03</p>
-          <h3>Performance native</h3>
-          <p>Une base Express/EJS légère, des animations sobres et un balisage propre pour rester fluide sur mobile et desktop.</p>
+          <h3>Tu avances sans stress</h3>
+          <p>Je t'explique les choix simplement, je te guide a chaque etape et tu sais toujours ou on va. Pas de devis flou, pas de jargon pour te perdre.</p>
         </article>
       </div>
     </div>
@@ -71,31 +78,31 @@
   <section class="section section-alt">
     <div class="container split-grid">
       <div class="reveal">
-        <p class="eyebrow">Pages connectées</p>
-        <h2>Chaque page pousse naturellement vers la suivante.</h2>
+        <p class="eyebrow">Comment on avance</p>
+        <h2>On commence par une conversation, puis je construis quelque chose d'utile pour ton activite.</h2>
       </div>
       <div class="timeline reveal reveal-delay">
         <article>
-          <span class="chip">Accueil</span>
-          <p>Positionne la promesse et redirige vers services, réalisations et contact.</p>
+          <span class="chip">Etape 1</span>
+          <p>On parle de ton activite, de tes clients et de ce que tu attends vraiment de ton site.</p>
         </article>
         <article>
-          <span class="chip">Services</span>
-          <p>Détaille l'offre et renvoie vers les projets et la prise de contact.</p>
+          <span class="chip">Etape 2</span>
+          <p>Je structure les pages, le message et les appels a l'action pour que ton site soit simple a comprendre et credibilisant.</p>
         </article>
         <article>
-          <span class="chip">Réalisations</span>
-          <p>Donne des cas d'usage et rassure avant la page à propos ou contact.</p>
+          <span class="chip">Etape 3</span>
+          <p>Ton site est mis en ligne avec une base prevue pour etre trouve sur Google et transformer les bonnes visites en prises de contact.</p>
         </article>
       </div>
     </div>
   </section>
 
   <%- include('../partials/final-cta', {
-    eyebrow: 'Prêt à déployer',
-    title: 'Une base premium, modulaire et prête à être adaptée à d’autres clients.',
-    description: 'On garde la signature des templates tout en la rendant propre, factorisée et navigable.',
-    primaryLabel: 'Parler du projet',
+    eyebrow: 'On se parle ?',
+    title: "Ton projet merite mieux qu'un simple template pose en ligne.",
+    description: "Explique-moi ce que tu fais, ce que tu veux obtenir et ou tu bloques aujourd'hui. Je te dirai ce qui est possible, simplement.",
+    primaryLabel: 'Parler de ton projet',
     primaryHref: '/contact',
     secondaryLabel: 'Voir les services',
     secondaryHref: '/services'

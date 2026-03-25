@@ -21,7 +21,7 @@ app.use(
     contentSecurityPolicy: {
       useDefaults: true,
       directives: {
-        "script-src": ["'self'", "'unsafe-inline'", "https://cdn.tailwindcss.com"],
+        "script-src": ["'self'"],
         "style-src": ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
         "img-src": ["'self'", "data:"],
         "font-src": ["'self'", "data:", "https://fonts.gstatic.com"],
@@ -104,8 +104,8 @@ const buildMailTransport = () => {
 
 app.get("/", (req, res) => {
   res.render("pages/home", {
-    title: "Thaneros | Ingénierie digitale premium",
-    description: "Création de sites vitrines premium en marque blanche.",
+    title: "Thaneros | Site web et visibilite Google",
+    description: "Je cree des sites web qui attirent des clients sur Google, avec un accompagnement simple et humain.",
     status: req.query.status || ""
   });
 });
@@ -113,28 +113,28 @@ app.get("/", (req, res) => {
 app.get("/services", (req, res) => {
   res.render("pages/services", {
     title: "Services | Thaneros",
-    description: "Services web premium en marque blanche."
+    description: "Creation de site, refonte et SEO integre pour t'aider a etre trouve et choisi."
   });
 });
 
 app.get("/realisations", (req, res) => {
   res.render("pages/realisations", {
-    title: "Réalisations | Thaneros",
-    description: "Un aperçu de projets et méthodes Thaneros."
+    title: "Realisations | Thaneros",
+    description: "Des exemples de sites penses pour rassurer, convaincre et transformer les visites en prises de contact."
   });
 });
 
 app.get("/a-propos", (req, res) => {
   res.render("pages/about", {
-    title: "À propos | Thaneros",
-    description: "Vision et engagement qualité de Thaneros."
+    title: "A propos | Thaneros",
+    description: "Une approche simple, humaine et orientee resultat pour creer un site utile a ton activite."
   });
 });
 
 app.get("/contact", (req, res) => {
   res.render("pages/contact", {
     title: "Contact | Thaneros",
-    description: "Parlons de votre futur site vitrine premium.",
+    description: "Parle-moi de ton projet et je t'expliquerai ce qu'il est possible de faire, simplement.",
     status: req.query.status || ""
   });
 });
@@ -232,7 +232,7 @@ app.post("/contact", contactLimiter, async (req, res) => {
 app.use((req, res) => {
   res.status(404).render("pages/404", {
     title: "Page introuvable | Thaneros",
-    description: "La page demandée est introuvable."
+    description: "La page demandee est introuvable."
   });
 });
 

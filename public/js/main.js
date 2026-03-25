@@ -64,3 +64,86 @@ const counterObserver = new IntersectionObserver(
 );
 
 counters.forEach((counter) => counterObserver.observe(counter));
+
+const carousels = document.querySelectorAll("[data-carousel]");
+
+carousels.forEach((carousel) => {
+  const track = carousel.querySelector("[data-carousel-track]");
+  const slides = Array.from(carousel.querySelectorAll("[data-carousel-slide]"));
+
+  if (!track || slides.length === 0) {
+    return;
+  }
+
+  let currentIndex = 0;
+  let startX = 0;
+  let currentX = 0;
+  let isDragging = false;
+  let autoplayId = null;
+
+  const updateCarousel = () => {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  };
+
+  const goToSlide = (index) => {
+    currentIndex = (index + slides.length) % slides.length;
+    updateCarousel();
+  };
+
+  const stopAutoplay = () => {
+    if (autoplayId) {
+      clearInterval(autoplayId);
+      autoplayId = null;
+    }
+  };
+
+  const startAutoplay = () => {
+    stopAutoplay();
+    autoplayId = setInterval(() => {
+      goToSlide(currentIndex + 1);
+    }, 3200);
+  };
+
+  track.addEventListener("pointerdown", (event) => {
+    isDragging = true;
+    startX = event.clientX;
+    currentX = event.clientX;
+    track.setPointerCapture(event.pointerId);
+    stopAutoplay();
+  });
+
+  track.addEventListener("pointermove", (event) => {
+    if (!isDragging) {
+      return;
+    }
+
+    currentX = event.clientX;
+  });
+
+  const endDrag = () => {
+    if (!isDragging) {
+      return;
+    }
+
+    const deltaX = currentX - startX;
+    isDragging = false;
+
+    if (Math.abs(deltaX) > 50) {
+      goToSlide(currentIndex + (deltaX < 0 ? 1 : -1));
+    } else {
+      updateCarousel();
+    }
+
+    startAutoplay();
+  };
+
+  track.addEventListener("pointerup", endDrag);
+  track.addEventListener("pointercancel", endDrag);
+  track.addEventListener("pointerleave", endDrag);
+
+  updateCarousel();
+  startAutoplay();
+
+  carousel.addEventListener("mouseenter", stopAutoplay);
+  carousel.addEventListener("mouseleave", startAutoplay);
+});

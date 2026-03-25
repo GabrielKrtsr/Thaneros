@@ -1,13 +1,13 @@
 <section class="section section-tight">
   <div class="container">
     <div class="cta-panel reveal">
-      <p class="eyebrow"><%= typeof eyebrow !== 'undefined' ? eyebrow : 'Démarrer' %></p>
+      <p class="eyebrow"><%= typeof eyebrow !== 'undefined' ? eyebrow : 'Demarrer' %></p>
       <h2><%= title %></h2>
       <% if (typeof description !== 'undefined' && description) { %>
         <p class="lead"><%= description %></p>
       <% } %>
       <div class="cta-row center">
-        <a href="<%= typeof primaryHref !== 'undefined' ? primaryHref : '/contact' %>" class="btn"><%= typeof primaryLabel !== 'undefined' ? primaryLabel : 'Lancer un projet' %></a>
+        <a href="<%= typeof primaryHref !== 'undefined' ? primaryHref : '/contact' %>" class="btn"><%= typeof primaryLabel !== 'undefined' ? primaryLabel : 'Parler de ton projet' %></a>
         <% if (typeof secondaryLabel !== 'undefined' && secondaryLabel) { %>
           <a href="<%= typeof secondaryHref !== 'undefined' ? secondaryHref : '/services' %>" class="btn btn-secondary"><%= secondaryLabel %></a>
         <% } %>
